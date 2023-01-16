@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+    <head>
+
+        {% load static %}
+        <link href="{% static 'css/mystyle.css' %}" rel="stylesheet" type="text/css">
+
+        <title>Welcome to Cafe time</title>
+
+        <style>
+            h4{
+                color: green;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Welcome to Cafe Time</h1>
+        <hr>
+        <h3>咖啡樹的品種</h3>
+
+        <h4>阿拉比卡咖啡(Arabica coffee) </h4>
+        <p>原產於東非伊索比亞南部的阿比西 尼亞高原，現今沿海尚有野生種。</p>
+        <img src="{% static 'images/arabica.png' %}" style="background-color: green;" onclick="alert('阿拉比卡咖啡')">
+
+        <h4>羅布斯塔咖啡(Robusta coffee) </h4>
+        <p>羅布斯塔咖啡屬於剛果咖啡的突變 種，原產於西非剛果，本種有缺乏香氣之 憾，苦味較強，酸味不足。</p>
+        <img src="{% static 'images/robusta.png' %}">
+
+        <h4>利比亞咖啡(Liberia coffee)</h4>
+        <p>原產於西非利比亞，本種香味不佳， 苦味較強。除少數生產國自己消費外，只 有歐洲人飲用利比亞咖啡。</p>
+        <img src="{% static 'images/liberia.png' %}">
+
+        <script src="{% static 'javascript/myjs.js' %}"></script>
+        <script>           
+
+                document.querySelectorAll('img')[1].onclick=function(){
+                    alert('羅布斯塔咖啡');
+                }
+
+                document.querySelectorAll('img')[2].onclick=function(){
+                    alert('利比亞咖啡');
+                }
+
+                document.querySelectorAll('img')[0].onmouseover=function(){
+                    setBg(this);
+                }
+
+                document.querySelectorAll('img')[0].onmouseout=function(){
+                    clearBg(this);
+                }
+
+                document.querySelectorAll('img')[1].onmouseover=function(){
+                    setBg(this);
+                }
+
+                document.querySelectorAll('img')[1].onmouseout=function(){
+                    clearBg(this);
+                }
+
+                document.querySelectorAll('img')[2].onmouseover=function(){
+                    setBg(this);
+                }
+
+                document.querySelectorAll('img')[2].onmouseout=function(){
+                    clearBg(this);
+                }
+
+        </script>
+
+    </body>
+</html>
