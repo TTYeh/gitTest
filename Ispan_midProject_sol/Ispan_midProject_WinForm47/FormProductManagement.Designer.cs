@@ -28,48 +28,86 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.buttonSearchAll = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.buttonAddNew = new System.Windows.Forms.Button();
+            this.buttonSearch = new System.Windows.Forms.Button();
+            this.dataGridViewProducts = new System.Windows.Forms.DataGridView();
+            this.buttonEdit = new System.Windows.Forms.Button();
+            this.buttonDelete = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProducts)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // buttonAddNew
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(168, 98);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 27;
-            this.dataGridView1.Size = new System.Drawing.Size(591, 294);
-            this.dataGridView1.TabIndex = 3;
+            this.buttonAddNew.Location = new System.Drawing.Point(8, 136);
+            this.buttonAddNew.Name = "buttonAddNew";
+            this.buttonAddNew.Size = new System.Drawing.Size(122, 39);
+            this.buttonAddNew.TabIndex = 4;
+            this.buttonAddNew.Text = "新增資料";
+            this.buttonAddNew.UseVisualStyleBackColor = true;
+            this.buttonAddNew.Click += new System.EventHandler(this.buttonAddNew_Click);
             // 
-            // buttonSearchAll
+            // buttonSearch
             // 
-            this.buttonSearchAll.Location = new System.Drawing.Point(70, 98);
-            this.buttonSearchAll.Name = "buttonSearchAll";
-            this.buttonSearchAll.Size = new System.Drawing.Size(75, 23);
-            this.buttonSearchAll.TabIndex = 2;
-            this.buttonSearchAll.Text = "SearchAll";
-            this.buttonSearchAll.UseVisualStyleBackColor = true;
-            this.buttonSearchAll.Click += new System.EventHandler(this.buttonSearchAll_Click);
+            this.buttonSearch.Location = new System.Drawing.Point(883, 91);
+            this.buttonSearch.Name = "buttonSearch";
+            this.buttonSearch.Size = new System.Drawing.Size(122, 39);
+            this.buttonSearch.TabIndex = 5;
+            this.buttonSearch.Text = "查詢";
+            this.buttonSearch.UseVisualStyleBackColor = true;
+            this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
+            // 
+            // dataGridViewProducts
+            // 
+            this.dataGridViewProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewProducts.Location = new System.Drawing.Point(136, 136);
+            this.dataGridViewProducts.Name = "dataGridViewProducts";
+            this.dataGridViewProducts.RowHeadersWidth = 51;
+            this.dataGridViewProducts.RowTemplate.Height = 27;
+            this.dataGridViewProducts.Size = new System.Drawing.Size(869, 396);
+            this.dataGridViewProducts.TabIndex = 6;
+            // 
+            // buttonEdit
+            // 
+            this.buttonEdit.Location = new System.Drawing.Point(8, 181);
+            this.buttonEdit.Name = "buttonEdit";
+            this.buttonEdit.Size = new System.Drawing.Size(122, 39);
+            this.buttonEdit.TabIndex = 7;
+            this.buttonEdit.Text = "編輯資料";
+            this.buttonEdit.UseVisualStyleBackColor = true;
+            this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
+            // 
+            // buttonDelete
+            // 
+            this.buttonDelete.Location = new System.Drawing.Point(8, 226);
+            this.buttonDelete.Name = "buttonDelete";
+            this.buttonDelete.Size = new System.Drawing.Size(122, 39);
+            this.buttonDelete.TabIndex = 8;
+            this.buttonDelete.Text = "刪除資料";
+            this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // FormProductManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(812, 474);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.buttonSearchAll);
+            this.ClientSize = new System.Drawing.Size(1070, 572);
+            this.Controls.Add(this.buttonDelete);
+            this.Controls.Add(this.buttonEdit);
+            this.Controls.Add(this.dataGridViewProducts);
+            this.Controls.Add(this.buttonSearch);
+            this.Controls.Add(this.buttonAddNew);
             this.Name = "FormProductManagement";
             this.Text = "ProductManagement";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProducts)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button buttonSearchAll;
+        private System.Windows.Forms.Button buttonAddNew;
+        private System.Windows.Forms.Button buttonSearch;
+        private System.Windows.Forms.DataGridView dataGridViewProducts;
+        private System.Windows.Forms.Button buttonEdit;
+        private System.Windows.Forms.Button buttonDelete;
     }
 }

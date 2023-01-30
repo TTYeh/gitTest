@@ -19,7 +19,5 @@ namespace Ispan_midProject_BllLib47.EF_CodeFirst
         public string category { get; set; }
 
         public DateTime ItineraryData { get; set; }
-
-        public virtual ItineraryDetail ItineraryDetail { get; set; }
     }
 }

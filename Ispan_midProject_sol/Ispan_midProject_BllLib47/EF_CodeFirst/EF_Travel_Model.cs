@@ -92,14 +92,6 @@ namespace Ispan_midProject_BllLib47.EF_CodeFirst
                 .Property(e => e.partialprice)
                 .HasPrecision(19, 4);
 
-            modelBuilder.Entity<ItineraryDetail>()
-                .HasOptional(e => e.Itinerary)
-                .WithRequired(e => e.ItineraryDetail);
-
-            modelBuilder.Entity<ItineraryDetail>()
-                .HasOptional(e => e.ItineraryDetails1)
-                .WithRequired(e => e.ItineraryDetail1);
-
             modelBuilder.Entity<KeyPair>()
                 .HasOptional(e => e.KeyPairs1)
                 .WithRequired(e => e.KeyPair1);

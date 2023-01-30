@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,5 +31,20 @@ namespace Ispan_midProject_BllLib47
             // if (entityInDB != null) throw new Exception("Product回傳是空的");
             // return entityInDB;
         }
+
+        public Product GetById(int Id)
+        {
+            return repo.GetById(Id);
+            // if (entityInDB != null) throw new Exception("Product回傳是空的");
+            // return entityInDB;
+        }
+
+        public void DeleteById(int Id)
+        {
+            repo.DeleteById(Id);
+            // if (entityInDB != null) throw new Exception("Product回傳是空的");
+            // return entityInDB;
+        }
     }
+   
 }

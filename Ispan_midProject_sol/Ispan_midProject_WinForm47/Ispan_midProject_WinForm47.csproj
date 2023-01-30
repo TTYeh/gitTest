@@ -68,6 +68,18 @@
     <Compile Include="FormOrderManagement.Designer.cs">
       <DependentUpon>FormOrderManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormProductCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProductCategory.Designer.cs">
+      <DependentUpon>FormProductCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProductCreator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProductCreator.Designer.cs">
+      <DependentUpon>FormProductCreator.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormProductEdit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +98,11 @@
     <Compile Include="FormProductPictureViewer.Designer.cs">
       <DependentUpon>FormProductPictureViewer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ispan_TravelWeb_Db4GroupProjectDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ispan_TravelWeb_Db4GroupProjectDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="FormSupplierManagement.cs">
@@ -94,8 +111,16 @@
     <Compile Include="FormSupplierManagement.Designer.cs">
       <DependentUpon>FormSupplierManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="VM_Models\ProductCreateVM.cs" />
+    <Compile Include="VM_Models\ProductSearchVM.cs" />
     <EmbeddedResource Include="BackStageMain.resx">
       <DependentUpon>BackStageMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProductCategory.resx">
+      <DependentUpon>FormProductCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProductCreator.resx">
+      <DependentUpon>FormProductCreator.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormProductEdit.resx">
       <DependentUpon>FormProductEdit.cs</DependentUpon>
@@ -118,6 +143,17 @@
     <EmbeddedResource Include="FormSupplierManagement.resx">
       <DependentUpon>FormSupplierManagement.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Ispan_TravelWeb_Db4GroupProjectDataSet.xsc">
+      <DependentUpon>Ispan_TravelWeb_Db4GroupProjectDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Ispan_TravelWeb_Db4GroupProjectDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Ispan_TravelWeb_Db4GroupProjectDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Ispan_TravelWeb_Db4GroupProjectDataSet.xss">
+      <DependentUpon>Ispan_TravelWeb_Db4GroupProjectDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -142,6 +178,7 @@
       <Name>Ispan_midProject_DalLib47</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

@@ -35,9 +35,6 @@ namespace Ispan_midProject_BllLib47.EF_CodeFirst
 
         public DateTime? SellEndDate { get; set; }
 
-        [MaxLength(50)]
-        public byte[] BlobId { get; set; }
-
         public int? ProductCategoryID { get; set; }
 
         public int? ProductModelID { get; set; }

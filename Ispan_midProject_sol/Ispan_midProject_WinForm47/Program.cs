@@ -17,6 +17,7 @@ namespace Ispan_midProject_WinForm47
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FormProductManagement());
+            // Application.Run(new FormProductCategory());
         }
     }
 }

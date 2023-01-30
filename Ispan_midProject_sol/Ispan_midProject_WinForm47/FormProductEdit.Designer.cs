@@ -30,20 +30,20 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxProductName = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxPN = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxPrice = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxCost = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimeStartSellTime = new System.Windows.Forms.DateTimePicker();
+            this.dateTimeEndSellTime = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
-            this.buttonAddData = new System.Windows.Forms.Button();
+            this.buttonUpdateData = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBoxCategory = new System.Windows.Forms.ComboBox();
+            this.comboBoxModel = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.buttonExit = new System.Windows.Forms.Button();
             this.buttonPicViewer = new System.Windows.Forms.Button();
@@ -69,13 +69,13 @@
             this.textBoxProductName.Size = new System.Drawing.Size(200, 35);
             this.textBoxProductName.TabIndex = 0;
             // 
-            // textBox1
+            // textBoxPN
             // 
-            this.textBox1.Location = new System.Drawing.Point(197, 102);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 35);
-            this.textBox1.TabIndex = 1;
+            this.textBoxPN.Location = new System.Drawing.Point(197, 102);
+            this.textBoxPN.Multiline = true;
+            this.textBoxPN.Name = "textBoxPN";
+            this.textBoxPN.Size = new System.Drawing.Size(200, 35);
+            this.textBoxPN.TabIndex = 1;
             // 
             // label2
             // 
@@ -87,13 +87,13 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "產品編號";
             // 
-            // textBox2
+            // textBoxPrice
             // 
-            this.textBox2.Location = new System.Drawing.Point(197, 163);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(200, 35);
-            this.textBox2.TabIndex = 2;
+            this.textBoxPrice.Location = new System.Drawing.Point(197, 163);
+            this.textBoxPrice.Multiline = true;
+            this.textBoxPrice.Name = "textBoxPrice";
+            this.textBoxPrice.Size = new System.Drawing.Size(200, 35);
+            this.textBoxPrice.TabIndex = 2;
             // 
             // label3
             // 
@@ -105,13 +105,13 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "表定價格";
             // 
-            // textBox3
+            // textBoxCost
             // 
-            this.textBox3.Location = new System.Drawing.Point(197, 221);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(200, 35);
-            this.textBox3.TabIndex = 3;
+            this.textBoxCost.Location = new System.Drawing.Point(197, 221);
+            this.textBoxCost.Multiline = true;
+            this.textBoxCost.Name = "textBoxCost";
+            this.textBoxCost.Size = new System.Drawing.Size(200, 35);
+            this.textBoxCost.TabIndex = 3;
             // 
             // label4
             // 
@@ -133,19 +133,20 @@
             this.label5.TabIndex = 8;
             this.label5.Text = "開始販賣時間";
             // 
-            // dateTimePicker1
+            // dateTimeStartSellTime
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(197, 270);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 25);
-            this.dateTimePicker1.TabIndex = 9;
+            this.dateTimeStartSellTime.Location = new System.Drawing.Point(197, 270);
+            this.dateTimeStartSellTime.Name = "dateTimeStartSellTime";
+            this.dateTimeStartSellTime.Size = new System.Drawing.Size(200, 25);
+            this.dateTimeStartSellTime.TabIndex = 9;
             // 
-            // dateTimePicker2
+            // dateTimeEndSellTime
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(197, 323);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 25);
-            this.dateTimePicker2.TabIndex = 11;
+            this.dateTimeEndSellTime.CustomFormat = " ";
+            this.dateTimeEndSellTime.Location = new System.Drawing.Point(197, 323);
+            this.dateTimeEndSellTime.Name = "dateTimeEndSellTime";
+            this.dateTimeEndSellTime.Size = new System.Drawing.Size(200, 25);
+            this.dateTimeEndSellTime.TabIndex = 11;
             // 
             // label6
             // 
@@ -157,14 +158,15 @@
             this.label6.TabIndex = 10;
             this.label6.Text = "停止販賣時間";
             // 
-            // buttonAddData
+            // buttonUpdateData
             // 
-            this.buttonAddData.Location = new System.Drawing.Point(301, 508);
-            this.buttonAddData.Name = "buttonAddData";
-            this.buttonAddData.Size = new System.Drawing.Size(96, 40);
-            this.buttonAddData.TabIndex = 12;
-            this.buttonAddData.Text = "新增資料";
-            this.buttonAddData.UseVisualStyleBackColor = true;
+            this.buttonUpdateData.Location = new System.Drawing.Point(301, 508);
+            this.buttonUpdateData.Name = "buttonUpdateData";
+            this.buttonUpdateData.Size = new System.Drawing.Size(96, 40);
+            this.buttonUpdateData.TabIndex = 12;
+            this.buttonUpdateData.Text = "更新資料";
+            this.buttonUpdateData.UseVisualStyleBackColor = true;
+            this.buttonUpdateData.Click += new System.EventHandler(this.buttonUpdateData_Click);
             // 
             // label7
             // 
@@ -176,21 +178,21 @@
             this.label7.TabIndex = 13;
             this.label7.Text = "產品類別";
             // 
-            // comboBox1
+            // comboBoxCategory
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(197, 371);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(200, 23);
-            this.comboBox1.TabIndex = 14;
+            this.comboBoxCategory.FormattingEnabled = true;
+            this.comboBoxCategory.Location = new System.Drawing.Point(197, 371);
+            this.comboBoxCategory.Name = "comboBoxCategory";
+            this.comboBoxCategory.Size = new System.Drawing.Size(200, 23);
+            this.comboBoxCategory.TabIndex = 14;
             // 
-            // comboBox2
+            // comboBoxModel
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(197, 421);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(200, 23);
-            this.comboBox2.TabIndex = 16;
+            this.comboBoxModel.FormattingEnabled = true;
+            this.comboBoxModel.Location = new System.Drawing.Point(197, 421);
+            this.comboBoxModel.Name = "comboBoxModel";
+            this.comboBoxModel.Size = new System.Drawing.Size(200, 23);
+            this.comboBoxModel.TabIndex = 16;
             // 
             // label8
             // 
@@ -253,20 +255,20 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.buttonPicViewer);
             this.Controls.Add(this.buttonExit);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.comboBoxModel);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBoxCategory);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.buttonAddData);
-            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.buttonUpdateData);
+            this.Controls.Add(this.dateTimeEndSellTime);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dateTimeStartSellTime);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBoxCost);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBoxPrice);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxPN);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxProductName);
             this.Controls.Add(this.label1);
@@ -281,20 +283,20 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxProductName;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxPN;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxPrice;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxCost;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dateTimeStartSellTime;
+        private System.Windows.Forms.DateTimePicker dateTimeEndSellTime;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button buttonAddData;
+        private System.Windows.Forms.Button buttonUpdateData;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBoxCategory;
+        private System.Windows.Forms.ComboBox comboBoxModel;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button buttonExit;
         private System.Windows.Forms.Button buttonPicViewer;

@@ -10,16 +10,46 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Ispan_midProject_BllLib47.EF_CodeFirst;
+using Ispan_midProject_BllLib47;
+using Ispan_midProject_BllLib47.Interface;
+using Ispan_midProject_DalLib47;
 
 namespace Ispan_midProject_WinForm47
 {
     public partial class FormProductEdit : Form
     {
+        private int Id;
+        private ProductService _service;
+        private Product _product;
+        private readonly IProductRepository repo;
+
         public string PicturePath { get; private set; }
 
-        public FormProductEdit()
+        public FormProductEdit(int Id)
         {
             InitializeComponent();
+            this.repo = new ProductRepository();
+            this._service = new ProductService(repo);
+
+            this.Id = Id;
+            this._product = _service.GetById(Id);
+            Display();
+        }
+
+        private void Display()
+        {
+            textBoxProductName.Text =  _product.Name;
+            textBoxPN.Text = _product.ProductNumber.ToString();
+            textBoxPrice.Text = _product.ListPrice.ToString();
+            textBoxCost.Text = _product.StandardCost.ToString();
+            dateTimeStartSellTime.Text = _product.SellStartDate.ToString();
+            dateTimeEndSellTime.Text = _product.SellEndDate.ToString();
+            //dateTimeEndSellTime.CustomFormat = " ";
+            //if (_product.SellEndDate != null)
+            //{
+            //    dateTimeEndSellTime.Format = DateTimePickerFormat.Short;
+            //    dateTimeEndSellTime.Text = _product.SellEndDate.Value.ToString();
+            //}
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
@@ -29,6 +59,7 @@ namespace Ispan_midProject_WinForm47
 
         private void buttonPicViewer_Click(object sender, EventArgs e)
         {
+            this.PicturePath = $@"\source\image_hw";
             if (this.PicturePath != null)
             {
                 Form frm = new FormProductPictureViewer(this.PicturePath);
@@ -45,6 +76,11 @@ namespace Ispan_midProject_WinForm47
         private void buttonAddPicture_Click(object sender, EventArgs e)
         {
             //OpenFileDialog
+        }
+
+        private void buttonUpdateData_Click(object sender, EventArgs e)
+        {
+
         }
     }
     //public class ProductDto

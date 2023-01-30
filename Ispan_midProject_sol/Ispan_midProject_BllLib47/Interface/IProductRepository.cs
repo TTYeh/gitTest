@@ -11,5 +11,10 @@ namespace Ispan_midProject_BllLib47.Interface
     {
         Product Create(Product entity);
         List<Product> GetAll();
+
+        Product GetById(int id);
+
+        void DeleteById(int id);
+
     }
 }

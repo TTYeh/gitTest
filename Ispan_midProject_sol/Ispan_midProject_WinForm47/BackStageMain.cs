@@ -33,7 +33,7 @@ namespace Ispan_midProject_WinForm47
 
         private void 產品總管ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form frm = new FormProductEdit();
+            Form frm = new FormProductManagement();
             frm.Owner= this;
             frm.Show();
         }

@@ -53,8 +53,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Interface\IProductRepository.cs" />
-    <Compile Include="ProductService.cs" />
     <Compile Include="EF_CodeFirst\Address.cs" />
     <Compile Include="EF_CodeFirst\Administrator.cs" />
     <Compile Include="EF_CodeFirst\Attraction.cs" />
@@ -63,11 +61,11 @@
     <Compile Include="EF_CodeFirst\Content001.cs" />
     <Compile Include="EF_CodeFirst\Customer.cs" />
     <Compile Include="EF_CodeFirst\CustomerAddress.cs" />
-    <Compile Include="EF_CodeFirst\EF_Travel_Model.cs" />
     <Compile Include="EF_CodeFirst\ErrorLog.cs" />
     <Compile Include="EF_CodeFirst\Itinerary.cs" />
     <Compile Include="EF_CodeFirst\ItineraryDetail.cs" />
     <Compile Include="EF_CodeFirst\KeyPair.cs" />
+    <Compile Include="EF_CodeFirst\EF_Travel_Model.cs" />
     <Compile Include="EF_CodeFirst\Product.cs" />
     <Compile Include="EF_CodeFirst\ProductCategory.cs" />
     <Compile Include="EF_CodeFirst\ProductDescription.cs" />
@@ -78,6 +76,9 @@
     <Compile Include="EF_CodeFirst\SalesOrderHeader.cs" />
     <Compile Include="EF_CodeFirst\sysdiagram.cs" />
     <Compile Include="EF_CodeFirst\User.cs" />
+    <Compile Include="ListExtension.cs" />
+    <Compile Include="Interface\IProductRepository.cs" />
+    <Compile Include="ProductService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

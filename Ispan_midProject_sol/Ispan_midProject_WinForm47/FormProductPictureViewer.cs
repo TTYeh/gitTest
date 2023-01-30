@@ -31,7 +31,8 @@ namespace Ispan_midProject_WinForm47
 
         private string[] LoadImages()
         {
-            string myImageSource = $@"\source\image_hw";
+            // 根據路徑讀出圖片
+            string myImageSource = this.picPath;
             var imgsPath = PathExtension.ProjectDirConcat(myImageSource);
             // Utility.ConcatWithProjectPath(myImageSource);
             var fileEntries = ProcessDirectory(imgsPath);

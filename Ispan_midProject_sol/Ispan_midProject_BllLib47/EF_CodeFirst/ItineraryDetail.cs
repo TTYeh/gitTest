@@ -10,7 +10,9 @@ namespace Ispan_midProject_BllLib47.EF_CodeFirst
     {
         public int id { get; set; }
 
-        public int AttractionsID { get; set; }
+        [Required]
+        [StringLength(50)]
+        public string AttractionsID { get; set; }
 
         public int quantity { get; set; }
 
@@ -19,11 +21,5 @@ namespace Ispan_midProject_BllLib47.EF_CodeFirst
 
         [Column(TypeName = "money")]
         public decimal partialprice { get; set; }
-
-        public virtual Itinerary Itinerary { get; set; }
-
-        public virtual ItineraryDetail ItineraryDetails1 { get; set; }
-
-        public virtual ItineraryDetail ItineraryDetail1 { get; set; }
     }
 }
